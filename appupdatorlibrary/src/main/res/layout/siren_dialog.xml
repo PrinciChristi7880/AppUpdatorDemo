@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSirenAlertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="#111"
+        android:textSize="15sp"
+        tools:text="Some text here" />
+
+    <RelativeLayout
+        android:id="@+id/llSirenButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_below="@+id/tvSirenAlertMessage">
+
+        <Button
+            android:id="@+id/btnSirenSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/btnSirenNextTime"
+            android:layout_marginLeft="@dimen/half_margin"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/skip_this_version"
+            android:background="@android:color/transparent"
+            />
+
+        <Button
+            android:id="@+id/btnSirenNextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/half_margin"
+            android:layout_marginRight="4dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/btnSirenUpdate"
+            android:text="@string/next_time"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnSirenUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/half_margin"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/transparent"
+            android:text="@string/update"
+            tools:ignore="ButtonStyle" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
